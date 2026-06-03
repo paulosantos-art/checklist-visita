@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Visita Técnica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div id="area-relatorio">
+        <h1>CHECKLIST DE VISITA TÉCNICA</h1>
+        <div class="subtitle">Polo de Apoio Presencial</div>
+        
+        <form id="checklistForm">
+            
+            <div class="step active" id="step1">
+                <h2>Dados Iniciais</h2><br>
+                <div class="form-group"><label>Data da visita:</label><input type="date" name="data_visita" required></div>
+                
+                <div class="form-group">
+                    <label>Polo:</label>
+                    <select name="polo" id="selectPolo" required>
+                        <option value="" disabled selected>Carregando lista de polos...</option>
+                    </select>
+                </div>
+
+                <div class="form-group"><label>Responsável presente:</label><input type="text" name="responsavel" placeholder="Nome do Responsável" required></div>
+                <div class="form-group"><label>Visitante:</label><input type="text" name="visitante" placeholder="Seu nome" required></div>
+            </div>
+
+            <div class="step" id="step2">
+                <h2>1. Percepção Geral do Cenário Encontrado</h2><br>
+                <label>Infraestrutura e Organização:</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label"><input type="checkbox" name="infra" value="Ambiente limpo e organizado"> Ambiente limpo e organizado</label>
+                    <label class="checkbox-label"><input type="checkbox" name="infra" value="Identidade visual adequada"> Identidade visual adequada</label>
+                    <label class="checkbox-label"><input type="checkbox" name="infra" value="Salas em condições de uso"> Salas em condições de uso</label>
+                    <label class="checkbox-label"><input type="checkbox" name="infra" value="Laboratórios funcionais"> Laboratórios funcionais</label>
+                    <label class="checkbox-label"><input type="checkbox" name="infra" value="Acessibilidade adequada"> Acessibilidade adequada</label>
+                    <label class="checkbox-label"><input type="checkbox" name="infra" value="Equipamentos funcionais"> Equipamentos funcionais</label>
+                    <label class="checkbox-label"><input type="checkbox" name="infra" value="Adm. organizado"> Adm. organizado</label>
+                    <label class="checkbox-label"><input type="checkbox" name="infra" value="Documentação disponível"> Documentação disponível</label>
+                </div>
+                <div class="form-group"><label>Observações:</label><textarea name="infra_observacoes" rows="3"></textarea></div>
+                <div class="form-group">
+                    <label>Percepção geral do ambiente:</label>
+                    <select name="percepcao_geral">
+                        <option>Excelente</option><option>Boa</option><option>Regular</option><option>Necessita intervenção</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="step" id="step3">
+                <h2>2. Atendimento ao Aluno</h2><br>
+                <div class="checkbox-group">
+                    <label class="checkbox-label"><input type="checkbox" name="atendimento" value="Equipe receptiva e cordial"> Equipe receptiva e cordial</label>
+                    <label class="checkbox-label"><input type="checkbox" name="atendimento" value="Tempo de resposta adequado"> Tempo de resposta adequado</label>
+                    <label class="checkbox-label"><input type="checkbox" name="atendimento" value="Conhecimento dos processos"> Conhecimento dos processos</label>
+                    <label class="checkbox-label"><input type="checkbox" name="atendimento" value="Registro de solicitações"> Registro de solicitações</label>
+                    <label class="checkbox-label"><input type="checkbox" name="atendimento" value="Divulgação dos canais"> Divulgação dos canais</label>
+                    <label class="checkbox-label"><input type="checkbox" name="atendimento" value="Alunos satisfeitos"> Alunos satisfeitos</label>
+                </div>
+                <div class="form-group"><label>Principais demandas relatadas:</label><textarea name="demandas_alunos" rows="2"></textarea></div>
+                <div class="form-group"><label>Necessidades de apoio da sede:</label><textarea name="apoio_sede_atendimento" rows="2"></textarea></div>
+            </div>
+
+            <div class="step" id="step4">
+                <h2>3. Desempenho Comercial & 4. Operação</h2><br>
+                <label>Ações Comerciais e Operacionais:</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label"><input type="checkbox" name="comercial_operacao" value="Ações de divulgação local"> Ações de divulgação local</label>
+                    <label class="checkbox-label"><input type="checkbox" name="comercial_operacao" value="Relacionamento comunidade"> Relacionamento comunidade</label>
+                    <label class="checkbox-label"><input type="checkbox" name="comercial_operacao" value="Acompanhamento de leads"> Acompanhamento de leads</label>
+                    <label class="checkbox-label"><input type="checkbox" name="comercial_operacao" value="Processos adm. organizados"> Processos adm. organizados</label>
+                    <label class="checkbox-label"><input type="checkbox" name="comercial_operacao" value="Controle documental adequado"> Controle documental adequado</label>
+                    <label class="checkbox-label"><input type="checkbox" name="comercial_operacao" value="Comunicação eficiente com a sede"> Comunicação eficiente com a sede</label>
+                </div>
+                <div class="form-group">
+                    <label>Análise da equipe local:</label>
+                    <select name="analise_equipe"><option>Motivada</option><option>Engajada</option><option>Necessita capacitação</option><option>Necessita acompanhamento</option></select>
+                </div>
+                <div class="form-group"><label>Principais dificuldades operacionais:</label><textarea name="dificuldades_operacionais" rows="2"></textarea></div>
+            </div>
+
+            <div class="step" id="step5">
+                <h2>5, 6 e 7. Perspectiva Acadêmica & Tutoria</h2><br>
+                <div class="checkbox-group">
+                    <label class="checkbox-label"><input type="checkbox" name="academico_tutoria" value="Acompanhamento de evasão"> Acompanhamento de evasão</label>
+                    <label class="checkbox-label"><input type="checkbox" name="academico_tutoria" value="Engajamento dos alunos"> Engajamento dos alunos</label>
+                    <label class="checkbox-label"><input type="checkbox" name="academico_tutoria" value="Aula Inaugural periódica"> Aula Inaugural periódica</label>
+                    <label class="checkbox-label"><input type="checkbox" name="academico_tutoria" value="Presença regular da tutoria"> Presença regular da tutoria</label>
+                    <label class="checkbox-label"><input type="checkbox" name="academico_tutoria" value="Proatividade em dúvidas"> Proatividade em dúvidas</label>
+                    <label class="checkbox-label"><input type="checkbox" name="academico_tutoria" value="Integração com o polo"> Integração com o polo</label>
+                </div>
+                <div class="form-group"><label>Desafios acadêmicos / Necessidade de capacitação:</label><textarea name="desafios_academicos" rows="3"></textarea></div>
+            </div>
+
+            <div class="step" id="step6">
+                <h2>8, 9, 10 e 11. Conclusão e Plano de Ação</h2><br>
+                <div class="form-group"><label>9. Pontos Fortes:</label><textarea name="pontos_fortes" rows="2"></textarea></div>
+                <div class="form-group"><label>10. Pontos de Atenção:</label><textarea name="pontos_atencao" rows="2"></textarea></div>
+                
+                <label>11. Plano de Ação:</label>
+                <table id="tabelaPlano">
+                    <thead><tr><th>Ação</th><th>Responsável</th><th>Prazo</th></tr></thead>
+                    <tbody>
+                        <tr class="linha-plano">
+                            <td><input type="text" class="plano-acao" placeholder="Ex: Treinar equipe"></td>
+                            <td><input type="text" class="plano-responsavel" placeholder="Nome"></td>
+                            <td><input type="date" class="plano-prazo"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="btn-add" id="btnAdicionarLinha">+ Adicionar Linha</button>
+                <br><br>
+
+                <div class="form-group">
+                    <label>PARECER FINAL DA VISITA:</label>
+                    <select name="parecer_final">
+                        <option>Polo em excelente funcionamento</option>
+                        <option>Polo atende adequadamente às demandas</option>
+                        <option>Polo necessita acompanhamento pontual</option>
+                        <option>Polo necessita plano de intervenção</option>
+                    </select>
+                </div>
+                <div class="form-group"><label>Considerações finais:</label><textarea name="consideracoes_finais" rows="3"></textarea></div>
+            </div>
+        </form>
+    </div> <div class="buttons-nav">
+        <button type="button" class="btn-prev" id="btnPrev" style="visibility: hidden;">Anterior</button>
+        <button type="button" class="btn-next" id="btnNext">Próximo</button>
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
